@@ -351,3 +351,65 @@ def pick_lotto():
    print(average([10, 20, 30]))
    # math_functions. 부분을 지우고 나머지 함수 부분만 쓰면 적용됨.
    ```
+
+
+
+
+
+## 10. FLASK
+
+1. 플라스크 초기 개발자모드 설정시 필요한 명령어
+
+   ```
+   export FLASK_APP=app.py
+   flask run -h 0.0.0.0 -p 8080
+      
+   export FLASK_ENV=development
+   ```
+
+   * 순서 뭐가 먼전지 모르겠지만, 일단 1번 명령어가 제일 먼저 나와야 하는 게 맞음.
+
+   * 터미널에 계속 입력해야 하는데, 매번 치는 게 귀찮으면 파이썬 창에 다음과 같이 입력해주고,
+
+     ```python
+     if __name__ == '__main__':
+         app.run(host='0.0.0.0', port=8080)
+     ```
+
+     터미널에는 다음과 같이 입력한다.
+
+     ```
+     $ python3 app.py
+     ```
+
+
+2. 
+
+   ```python
+   from flask import Flask, jsonify
+   from random import sample
+   
+   app = Flask(__name__)
+   
+   @app.route("/")
+   def index(): 
+       return 'Happy Hacking'
+       
+   @app.route("/hi")
+   def hi():
+       return 'Hello SSAFY'
+       
+   @app.route("/pick_lotto")
+   def pick_lotto():
+       return jsonify(sample(range(1, 46), 6))
+       
+   @app.route("/get_lotto")
+   def get_lotto():
+       data={
+           'numbers':[1, 2, 3, 4, 5, 6],
+           'bonus':7
+       }
+       return jsonify(data)
+   ```
+
+
