@@ -249,6 +249,7 @@ eduyu jupyter_notebooks > clone or download > 주소 복사해서 git bash에 �
     | "        | 이중인용부호(") |
 
 * `end=` 백슬래시 기능. 괄호 안에 부등호가 있는 경우엔 무조건 띄어쓰기 하지 않음. 
+* print문에 한 줄 띄어쓰기를 하고 싶을 때, \n을 + '\n'의 형태로 집어넣을 수 있음.
 
 
 
@@ -258,9 +259,14 @@ eduyu jupyter_notebooks > clone or download > 주소 복사해서 git bash에 �
 
     ```python
     name = 'Ben'
-    'Hello %s' % name
+    print('Hello %s' % name)  # %s가 일종의 컵홀더 같은 느낌
     
     'Hello Ben'
+    
+    name = "철수"
+    print('"안녕, %s야"' % name)
+    
+    "안녕, 철수야"
     ```
 
     2) [`str.format()`](https://pyformat.info/)
@@ -286,6 +292,8 @@ eduyu jupyter_notebooks > clone or download > 주소 복사해서 git bash에 �
       f'오늘은 {today:%y}년 {today:%m}월 {today:%d}일 {today:%A}'
       
       '오늘은 19년 01월 02일 Wednesday'
+      
+      # 이때 %A는 그냥 디폴트값으로 요일을 호출함. 변경X 이유X
       ```
 
     * 연산도 가능
@@ -350,6 +358,7 @@ eduyu jupyter_notebooks > clone or download > 주소 복사해서 git bash에 �
 * 'HI' == 'hi'는 False 
 
   사람다운지, 아닌지? 근데 딱히 납득이 잘 안 간다. 동일원리가 적용되지 않아서 뭔가 컴퓨터답지가 않음.
+
 
 
 17. 논리 연산자
