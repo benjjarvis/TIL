@@ -638,6 +638,8 @@ print(result)
   signup(**new_account)
   signup(username='benjjarvis', password='aldkjaldj', password_confirm='aldkjaldj')
   # 맨 위의 코드가 아래 모양으로 펼쳐지는 것
+  
+  {'username': 'benjjarvis', 'password': 'aldkjaldj', 'password_confirm': 'aldkjaldj'}
   ```
 
 
