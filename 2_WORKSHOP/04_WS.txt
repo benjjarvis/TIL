@@ -1,0 +1,65 @@
+
+1. 두 개의 정수 n과 m이 주어집니다. 반복문을 사용하지 않고 별(*) 문자를 이용해 가로의 길이가 n, 세로의 길이가 m인 직사각형 형태를 출력해보세요.
+
+n = 5
+m = 9
+
+# 1
+line = n * '*' + '\n'
+height = m
+
+print(line * height)
+
+
+# 2
+hori = n * '*'
+
+print(f'{hori}\n' * m)
+
+
+
+
+
+2. 다음 딕셔너리에서 평균 점수를 출력하시오.
+student = {'python' : 80, 'algorithm' : 99, 'django' : 89, 'flask' : 83}
+
+points = student.values()
+average = sum(points) / len(points)
+
+print(average)
+
+
+
+
+3. 다음은 학생들의 혈액형에 대한 데이터이다. for문을 이용하여 각 혈액형별 학생수의 합계를 구하시오.
+
+blood_types = ['A', 'B', 'A', 'O', 'AB', 'AB', 'O', 'A', 'B', 'O', 'B', 'AB']
+
+count_A = 0
+for a in blood_types:
+    if a == 'A':
+        count_A += 1
+        
+print(count_A)
+
+count_B = 0
+for b in blood_types:
+    if b == 'B':
+        count_B += 1
+        
+print(count_B)
+
+count_O = 0
+for o in blood_types:
+    if o == 'O':
+        count_O += 1
+        
+print(count_O)
+
+count_AB = 0
+for ab in blood_types:
+    if ab == 'AB':
+        count_AB += 1
+        
+print(count_AB)
+
