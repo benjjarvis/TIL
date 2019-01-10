@@ -1,0 +1,17 @@
+
+1. 바이섹션 만들기 
+
+def root(sample_num, c = 6):
+    count = 1
+    min_n = sample_num - 0.1
+    while count != (c + 1):
+        if min_n ** 2 > sample_num:
+            min_n = min_n - 0.1 ** (count)
+        elif min_n ** 2 < sample_num:
+            min_n = min_n + 0.1 ** (count)
+            count += 1
+        else:
+            return min_n
+    return round(min_n, c)
+
+print(root(2,10))
